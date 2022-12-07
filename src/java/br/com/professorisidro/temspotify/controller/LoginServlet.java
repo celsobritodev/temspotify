@@ -4,6 +4,7 @@
  */
 package br.com.professorisidro.temspotify.controller;
 
+import br.com.professorisidro.temspotify.dao.UsuarioDAO;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -11,6 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.List;
 
 
 /**
@@ -27,8 +29,12 @@ public class LoginServlet extends HttpServlet {
           String email=request.getParameter("txtEmail");
           String senha=request.getParameter("txtSenha");
           String pagina;
+          List<Object> res;
+          UsuarioDAO userDAO = new UsuarioDAO();
+          res = userDAO.read(null);
           if (email.equals("isidro@professorisidro.com.br") && senha.equals("1234")) {
-              pagina="/myAccount.jsp";
+              request.getSession().setAttribute("Usuario", res.get(0));
+              pagina="/myAccount.jsp"; 
           } else {
               request.setAttribute("erroSTR","Email / Senha não encontrados!");
               pagina="/error.jsp";

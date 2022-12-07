@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <jsp:useBean id="Usuario" type="br.com.professorisidro.temspotify.model.Usuario" scope="session"/>
+<%@taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -34,12 +36,12 @@
                 <div class="col-md-12">
 
                     <h4 class="text-center">
-                        Bem vindo!!! ${Usuario.nome}
+                        Minhas Playlists!
                     </h4>
 
                 </div>  
             </div>
-            <div class="row" id="conteudo">
+            <div class="row" id="menu">
                 <div class="col-md-2">
                     &nbsp; 
                 </div> 
@@ -61,12 +63,16 @@
                 </div>
 
 
-            </div>                
-
-
+            </div>  
+                <c:forEach var="playlist" items="${Usuario.playlists}">    
+            <!-- varias iteracores -->
+            <div class="row">
+                <div class="col-md-2"> &nbsp; </div>
+                <div class="col-md-8"> &nbsp; </div>
+                <div class="col-md-2"> &nbsp; </div>
+            </div> 
+            </c:forEach>
         </div>    
-
-
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/scripts.js"></script>
