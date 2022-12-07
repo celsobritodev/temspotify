@@ -33,7 +33,7 @@ public class UsuarioDAO implements GenericDAO {
         ArrayList<PlayList> playLists = new ArrayList<>();
         PlayList playList1 = new PlayList();
         playList1.setId(1);
-        playList1.setTitulol("Crassicos do Roqui");
+        playList1.setTitulo("Crassicos do Roqui");
         
         ArrayList<Musica> musicas = new ArrayList<>();
         Musica musica1 = new Musica();

@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class PlayList implements Serializable{
     private int id;
-    private String titulol;
+    private String titulo;
     private List<Musica> musicas;
 
     public int getId() {
@@ -24,12 +24,12 @@ public class PlayList implements Serializable{
         this.id = id;
     }
 
-    public String getTitulol() {
-        return titulol;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setTitulol(String titulol) {
-        this.titulol = titulol;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     /**

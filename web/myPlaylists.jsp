@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <jsp:useBean id="Usuario" type="br.com.professorisidro.temspotify.model.Usuario" scope="session"/>
-<%@taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html lang="en">
     <head>
@@ -51,7 +51,7 @@
                             <a class="nav-link" href="#">Nova Playlist</a>
                         </li>
                        <li class="nav-item ml-md-auto">
-                            <a class="nav-link" href="./myPlaylists">Minha Playlist</a>
+                            <a class="nav-link" href="myplaylists">Minha Playlist (myPlaylists.jsp)</a>
                         </li>
                         <li class="nav-item ml-md-auto">
                             <a class="nav-link " href="#">Upload Musica</a>
@@ -64,17 +64,20 @@
 
 
             </div>  
-                <c:forEach var="playlist" items="${Usuario.playlists}">    
-            <!-- varias iteracores -->
-            <div class="row">
+      
+           <c:forEach items="${Usuario.playlists}" var="playlist">
+              <div class="row">
                 <div class="col-md-2"> &nbsp; </div>
                 <div class="col-md-8"> &nbsp; </div>
+                
+                ${Usuario.id} 
+                 
                 <div class="col-md-2"> &nbsp; </div>
             </div> 
-            </c:forEach>
+        </c:forEach>
         </div>    
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/scripts.js"></script>
-    </body>
+        </body>
 </html>
