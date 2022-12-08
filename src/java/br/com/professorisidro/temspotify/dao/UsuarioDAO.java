@@ -52,8 +52,18 @@ public class UsuarioDAO implements GenericDAO {
         musica2.setAlbum("Scorpions");
         musica2.setLinkMP3("musicas/Scorpions-RYLAH.mp3");
         
+        
+        Musica musica3 = new Musica();
+        musica3.setId(3);
+        musica3.setArtista("Peninha");
+        musica3.setTitulo("Sonhos");
+        musica3.setEstilo(2);
+        musica3.setAlbum("MPB");
+        musica3.setLinkMP3("musicas/Peninha-Sonhos.mp3");
+        
         musicas.add(musica1);
         musicas.add(musica2);
+        musicas.add(musica3);
         
         playList1.setMusicas(musicas);
         playLists.add(playList1);
