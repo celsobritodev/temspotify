@@ -16,29 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tblplaylist`
+-- Table structure for table `tblmusicaplaylist`
 --
 
-DROP TABLE IF EXISTS `tblplaylist`;
+DROP TABLE IF EXISTS `tblmusicaplaylist`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tblplaylist` (
-  `idPlayList` int NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(150) DEFAULT NULL,
-  `idUsuario` int NOT NULL,
-  PRIMARY KEY (`idPlayList`),
-  KEY `fk_usuario` (`idUsuario`),
-  CONSTRAINT `fk_usuario` FOREIGN KEY (`idUsuario`) REFERENCES `tblusuario` (`idUsuario`)
+CREATE TABLE `tblmusicaplaylist` (
+  `idPlaylist` int NOT NULL,
+  `idMusica` int NOT NULL,
+  PRIMARY KEY (`idPlaylist`,`idMusica`),
+  KEY `fk_mu` (`idMusica`),
+  CONSTRAINT `fk_mu` FOREIGN KEY (`idMusica`) REFERENCES `tblmusica` (`idMusica`),
+  CONSTRAINT `fk_pl` FOREIGN KEY (`idPlaylist`) REFERENCES `tblplaylist` (`idPlayList`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tblplaylist`
+-- Dumping data for table `tblmusicaplaylist`
 --
 
-LOCK TABLES `tblplaylist` WRITE;
-/*!40000 ALTER TABLE `tblplaylist` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tblplaylist` ENABLE KEYS */;
+LOCK TABLES `tblmusicaplaylist` WRITE;
+/*!40000 ALTER TABLE `tblmusicaplaylist` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tblmusicaplaylist` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

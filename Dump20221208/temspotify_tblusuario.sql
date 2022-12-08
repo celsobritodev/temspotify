@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: temspotify
 -- ------------------------------------------------------
--- Server version	8.0.31
+-- Server version	8.0.30
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -28,7 +28,7 @@ CREATE TABLE `tblusuario` (
   `email` varchar(45) NOT NULL,
   `senha` varchar(32) NOT NULL,
   PRIMARY KEY (`idUsuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +37,7 @@ CREATE TABLE `tblusuario` (
 
 LOCK TABLES `tblusuario` WRITE;
 /*!40000 ALTER TABLE `tblusuario` DISABLE KEYS */;
+INSERT INTO `tblusuario` VALUES (1,'Professor Isidro','isidro@professorisidro.com.br','1234'),(2,'User Teste','teste@teste.com','1234'),(3,'King of Metal','king@metal.com','1234');
 /*!40000 ALTER TABLE `tblusuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-08  8:25:28
+-- Dump completed on 2022-12-08 13:42:52

@@ -4,6 +4,7 @@
  */
 package br.com.professorisidro.temspotify.controller;
 
+import br.com.professorisidro.temspotify.dao.DataSource;
 import br.com.professorisidro.temspotify.dao.UsuarioDAO;
 import br.com.professorisidro.temspotify.model.Usuario;
 import jakarta.servlet.RequestDispatcher;
@@ -12,7 +13,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.nio.file.Files;
+import java.sql.SQLException;
 import java.util.List;
 
 
@@ -29,19 +30,27 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
           String email=request.getParameter("txtEmail");
           String senha=request.getParameter("txtSenha");
-          String pagina;
-          List<Object> res;
-          UsuarioDAO userDAO = new UsuarioDAO();
-          res = userDAO.read(null);
-          Usuario userLogged = (Usuario) res.get(0);
-      //     if (email.equals("isidro@professorisidro.com.br") && senha.equals("1234")) {
-          if (email.equals("a@b.com") && senha.equals("1")) {
-              request.getSession().setAttribute("Usuario", userLogged);
-              pagina="/myAccount.jsp"; 
-          } else {
-              request.setAttribute("erroSTR","Email / Senha não encontrados!");
-              pagina="/error.jsp";
+          Usuario incompleto = new Usuario();
+          incompleto.setEmail(email);
+          incompleto.setSenha(senha);
+          String pagina="/erro.jsp";
+         
+          try {
+              DataSource ds = new DataSource();
+              UsuarioDAO userDAO = new UsuarioDAO(ds);
+              List<Object> res = userDAO.read(incompleto);
+              if (res!=null && !res.isEmpty()) {
+                  pagina="/myAccount.jsp";
+                  request.getSession().setAttribute("Usuario",res.get(0));
+              } else {
+                   request.setAttribute("erroSTR","Usuario / Senha invalidos");
+              }
+             ds.getConnection().close();
+          } catch (SQLException ex) {
+              request.setAttribute("erroSTR","Erro ao recuperar");
+              
           }
+     
           RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
           dispatcher.forward(request, response);
           
