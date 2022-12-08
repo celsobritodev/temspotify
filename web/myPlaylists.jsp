@@ -47,14 +47,14 @@
                 </div> 
                 <div class="col-md-8">
                     <ul class="nav">
-                        <li class="nav-item ml-md-auto">
-                            <a class="nav-link" href="#">Nova Playlist</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nova Playlist       </a>
                         </li>
-                       <li class="nav-item ml-md-auto">
+                       <li class="nav-item">
                             <a class="nav-link" href="myplaylists">Minha Playlist (myPlaylists.jsp)</a>
                         </li>
-                        <li class="nav-item ml-md-auto">
-                            <a class="nav-link " href="#">Upload Musica</a>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">Upload Musica        </a>
                         </li>
                     </ul>
                 </div>
@@ -68,10 +68,14 @@
            <c:forEach items="${Usuario.playlists}" var="playlist">
               <div class="row">
                 <div class="col-md-2"> &nbsp; </div>
-                <div class="col-md-8"> &nbsp; </div>
-                
-                ${Usuario.id} 
-                 
+                <div class="col-md-8">
+                    <strong> ${playlist.titulo}</strong><br>
+                    <ul>
+                    <c:forEach  items="${playlist.musicas}" var="musica">
+                        <li>${musica.titulo} (${musica.artista}) </li> 
+                    </c:forEach>
+                    </ul>    
+                </div>
                 <div class="col-md-2"> &nbsp; </div>
             </div> 
         </c:forEach>

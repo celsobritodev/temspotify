@@ -13,7 +13,7 @@ import java.io.Serializable;
 public class Musica implements Serializable{
     private int id;
     private String titulo;
-    private String artitista;
+    private String artista;
     private String album;
     private int estilo;
     private String linkMP3;
@@ -34,12 +34,12 @@ public class Musica implements Serializable{
         this.titulo = titulo;
     }
 
-    public String getArtitista() {
-        return artitista;
+    public String getArtista() {
+        return artista;
     }
 
-    public void setArtitista(String artitista) {
-        this.artitista = artitista;
+    public void setArtista(String artista) {
+        this.artista = artista;
     }
 
     public String getAlbum() {
