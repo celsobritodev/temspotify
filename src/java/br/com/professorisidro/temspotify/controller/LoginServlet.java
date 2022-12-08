@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
           Usuario incompleto = new Usuario();
           incompleto.setEmail(email);
           incompleto.setSenha(senha);
-          String pagina="/erro.jsp";
+          String pagina="/error.jsp";
          
           try {
               DataSource ds = new DataSource();

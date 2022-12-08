@@ -64,6 +64,9 @@ public class Usuario implements  Serializable{
         this.playlists = playlists;
     }
     
-    
+   @Override 
+   public String toString() {
+       return id + " . "+ nome +" . "+email;
+   } 
     
 }
