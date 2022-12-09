@@ -17,10 +17,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 
-/**
- *
- * @author Usuario
- */
+
 public class LoginServlet extends HttpServlet {
 
    

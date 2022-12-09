@@ -14,6 +14,15 @@ import java.util.List;
 public class PlayList implements Serializable{
     private int id;
     private String titulo;
+    private Usuario usuario;
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
     private List<Musica> musicas;
 
     public int getId() {

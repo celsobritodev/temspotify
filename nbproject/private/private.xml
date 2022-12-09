@@ -3,17 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Celso/Documents/NetBeansProjects/temspotify/web/error.jsp</file>
-            <file>file:/C:/Users/Celso/Documents/NetBeansProjects/temspotify/src/java/br/com/professorisidro/temspotify/controller/LoginServlet.java</file>
-            <file>file:/C:/Users/Celso/Documents/NetBeansProjects/temspotify/src/java/br/com/professorisidro/temspotify/model/Usuario.java</file>
-            <file>file:/C:/Users/Celso/Documents/NetBeansProjects/temspotify/src/java/br/com/professorisidro/temspotify/dao/GenericDAO.java</file>
-            <file>file:/C:/Users/Celso/Documents/NetBeansProjects/temspotify/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/Celso/Documents/NetBeansProjects/temspotify/web/myAccount.jsp</file>
-            <file>file:/C:/Users/Celso/Documents/NetBeansProjects/temspotify/src/java/br/com/professorisidro/temspotify/model/PlayList.java</file>
-            <file>file:/C:/Users/Celso/Documents/NetBeansProjects/temspotify/web/myPlaylists.jsp</file>
-            <file>file:/C:/Users/Celso/Documents/NetBeansProjects/temspotify/src/java/br/com/professorisidro/temspotify/dao/UsuarioDAO.java</file>
-            <file>file:/C:/Users/Celso/Documents/NetBeansProjects/temspotify/web/index.html</file>
-            <file>file:/C:/Users/Celso/Documents/NetBeansProjects/temspotify/src/java/br/com/professorisidro/temspotify/controller/MyPlaylistsServlet.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/TemSpotify/src/java/br/com/professorisidro/temspotify/controller/MyPlaylistsServlet.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/temspotify/nbproject/build-impl.xml</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/TemSpotify/src/java/br/com/professorisidro/temspotify/model/PlayList.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/TemSpotify/src/java/br/com/professorisidro/temspotify/controller/NovaPlaylistServlet.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/temspotify/web/META-INF/context.xml</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/TemSpotify/src/java/br/com/professorisidro/temspotify/dao/DataSource.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/TemSpotify/src/java/br/com/professorisidro/temspotify/controller/EfetivaPlaylistServlet.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/TemSpotify/src/java/br/com/professorisidro/temspotify/dao/PlaylistDAO.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/TemSpotify/src/java/br/com/professorisidro/temspotify/dao/UsuarioDAO.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/temspotify/web/newUser.jsp</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/temspotify/web/myAccount.jsp</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/temspotify/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/temspotify/web/index.html</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/temspotify/web/myPlaylists.jsp</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/temspotify/web/novaPlaylist.jsp</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/temspotify/web/error.jsp</file>
         </group>
     </open-files>
 </project-private>

@@ -51,7 +51,7 @@
                             <a class="nav-link" href="#">Nova Playlist       </a>
                         </li>
                        <li class="nav-item">
-                            <a class="nav-link" href="myplaylists">Minha Playlist (myPlaylists.jsp)</a>
+                            <a class="nav-link" href="/playlists">Minha Playlist (myPlaylists.jsp)</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="#">Upload Musica        </a>

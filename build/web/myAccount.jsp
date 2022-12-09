@@ -43,11 +43,11 @@
                 <div class="col-md-2">
                     &nbsp; 
                 </div> 
-                <div class="col-md-2 ">
-                    <span class="text-center"><a class="botao" href="novamusica">Upload Musica</a></span>
+                <div class="col-md-2 botao">
+                    <span class="text-center"><a  href="novamusica">Upload Musica</a></span>
                 </div>
                   <div class="col-md-2 botao">
-                      <span class="text-center"><a href="playlists">Minhas Playlists</a></span>
+                      <span class="text-center"><a href="myplaylists">Minhas Playlists</a></span>
                   </div><!-- comment -->
                     <div class="col-md-2 botao">
                         <span class="text-center"><a href="novaplaylist">Nova Playlist</a></span>
